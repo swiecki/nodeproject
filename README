@@ -1,0 +1,3 @@
+A couple hours experimenting with Socket.io on Node.js. I am also using express.js and twitter bootstrap. Jade is installed (and I started using it) but then went back to HTML because I might as well use HTML if I know it. Also jQuery.
+
+So far all it does is emit an event when a client connects, and respond to this emit. Also when the "About" link is clicked in the navigation bar, it destroys the "About" links in the nav bar for all other connected clients.
