@@ -1,0 +1,23 @@
+!!! html
+html(lang='en')
+	head
+		title My App v .01
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+		script(src='/socket.io/socket.io.js')
+		script(src='js/bootstrap.js')
+		script(type='text/javascript')
+			var socket = io.connect('http://localhost', {port: 1337});
+			socket.on('servergo', function () {
+			for (i=0;i<=5;i++){
+			socket.emit('clientgo', { my: 'hello world' });
+			}
+			});
+		| 	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		| 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	body
+		div!= body
+		div(class="row")
+			div(class="span4")
+				p test
+			div(class="span4 offset 4")
+				p testing
